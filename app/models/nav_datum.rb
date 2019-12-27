@@ -1,0 +1,2 @@
+class NavDatum < ApplicationRecord
+end

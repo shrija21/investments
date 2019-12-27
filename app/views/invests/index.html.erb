@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Invests</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Selected date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invests.each do |invest| %>
+      <tr>
+        <td><%= invest.amount %></td>
+        <td><%= invest.selected_date %></td>
+        <td><%= link_to 'Show', invest %></td>
+        <td><%= link_to 'Edit', edit_invest_path(invest) %></td>
+        <td><%= link_to 'Destroy', invest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invest', new_invest_path, :class => "btn" %>

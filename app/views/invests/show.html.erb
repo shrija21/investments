@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @invest.amount %>
+</p>
+
+<p>
+  <strong>Selected date:</strong>
+  <%= @invest.selected_date %>
+</p>
+
+<%= link_to 'Edit', edit_invest_path(@invest), :class => "btn" %> |
+<%= link_to 'Back', invests_path, :class => "btn" %>
